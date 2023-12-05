@@ -1,0 +1,70 @@
+Ch01. 프론트엔드와 백앤드
+@프론트엔드 중요한 것
+1. 웹 퍼블리싱
+2. javascript DOM
+3. ajax
+ - 정석은 XMLHttpRequest, jquery로 ajax, react & vuejs에서 axios
+
+@자바스크립트 흐름
+1990년-----------2005년-------------------2010------------------------------------------------------2020----------------
+javascript                    jquery                        ANGULAR  BACKBONE ember react vuejs       next.js  nuxt.js
+                                                                    SPA(모바일 앱스럽게 바뀌는 트렌드)
+@백앤드 구성
+ - 응용 프로그램, 데이터베이스, 서버로 나뉜다
+1. 응용 프로그램 : 클라이언트 요청을 해석한다.
+     - java(Spring), Python(Django), PHP(Laravel), ruby(ruby on rails)
+2. 데이터베이스: 데이터를 저장하는 저장소
+    - Oracle, MySql, postgreSQL, mongoDB, mariaDB, tibero
+3. 서버 : 클라이언트 요청에 응답한다
+       요청(request), 응답(response)
+
+
+Ch02. node.js란?
+1. 특징
+ - 구글이 출시한 자바스크립트 실행엔진(자바스크립트 런타임)이다.
+ - nodejs는 서버가 아니고 실행엔진이며 서버기능을 하는 모듈이 있다.
+ - 특유의 간결한 문법과 성능 덕분에 인기가 많다.
+ - 언어(자바스크립트) 하나로 프론트엔드와 백엔드가 전부 가능하다.
+
+2. 성능이 좋은 이유
+ - nodejs 만든 서버는 비동기(non-blocking)이기 때문이다.
+
+3. 단점
+ - 고성능의 CPU를 필요로하는 node.js 성능으로 구현하기 힘들다.
+   ex) 이미지변환, 동영상압축, 숫자연산
+
+
+Ch03. node.js 세팅
+1. node.js 설치
+ - nodejs 공식 사이트에서 다운로드 후 설치(왼쪽 안정적인 버전 권장)
+
+2. npm
+ - node package manager라고 하는데
+ - nodejs에서 사용하는 다양한 모듈을 가져다 쓸 수 있는 패키지 매니저
+ - 모듈은 미리 짜여진 코드로 프로그램을 구성하는 데이터와 함수를 하나로 묶은 단위
+
+
+Ch04. express 모듈
+ - nodejs를 사용해서 웹 프레임워크를 만드는 모듈이다.
+
+ 1.port
+ - 클라이언트에서 오는 요청이 서버로 들어가는 입구
+
+2. localhost
+ - 내 컴퓨터의 ip를 작성하지 않아도 접속하게 해주는 것
+
+3. 요청응답 함수
+app.get('/', function (req, res) {
+  res.send('Hello World!!!!!!!!!!!!!')
+})
+ - get : HTTP 메서드
+ - 첫번째 매개변수 : 라우팅
+ - 두번째 매개변수 : 콜백 함수
+
+   1) HTTP 메서드
+     - 요청의 목적이나 방식을 어떻게 할건지 알려주는 메서드
+   2) 라우팅
+     - 포트안에 접속할 수 있는 파일들의 경로를 말한다.
+   3) 콜백함수
+     - 앞에 get이나 post 함수가 실행되고 난 다음에 실행하는 함수
+     
